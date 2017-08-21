@@ -1,30 +1,17 @@
 import React, { Component } from 'react';
 import Dygraph from 'dygraphs';
 import './Graph.css';
-import * as data from '../sample-data.json' ;
+
 
 class App extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            config: {
-                "title": "Pressure Transient(s)",
-                "xlabel": "Time",
-                "ylabel": "Pressure (meters)",
-                "gridLineWidth": 0.1,
-                "labels": ["Date", "Tampines Ave10 (Stn 40)"],
-                "connectSeparatedPoints": true,
-                "axes": {
-                    "x": {
-                        "axisLabelFontSize": 9
-                    }
-                },
-                "legend": "always"
-            },
+            config: props.config.default,
             data: function () {
                 var arr = [];
-                for (var key in data.default) {
-                    var eachData = data.default[key];
+                for (var key in props.data.default) {
+                    var eachData = props.data.default[key];
                     eachData[0] = new Date(eachData[0]);
                     arr.push(eachData);
                 }
