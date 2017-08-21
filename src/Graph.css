@@ -1,23 +1,17 @@
-.App {
+.Graph {
   text-align: center;
 }
 
-
-.App-body {
+.Graph-body {
   height: 500px;
   width:95%;
+  padding:5px;
 }
 
 .dygraph-label-rotate-right{
-  /* Safari */
   -webkit-transform: rotate(-90deg);
-
-  /* Firefox */
   -moz-transform: rotate(-90deg);
-
-  /* IE */
   -ms-transform: rotate(-90deg);
-
   transform: rotate(-90deg);
   margin-left: 10px;
 }
@@ -28,4 +22,10 @@
 
 .dygraph-label.dygraph-xlabel{
   text-align: center;
+}
+
+.dygraph-legend{
+  left: 43% !important;
+  top: 103% !important;
+  position: absolute;
 }
